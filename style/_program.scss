@@ -1,0 +1,97 @@
+.program {
+    .top-bg {
+        @include sm {
+            background-color: #f7f9fd;
+            border-radius: 0px 0px 0px 300px;
+            background-image: url(../images/banner.svg);
+            background-position: top right;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .banner-bg {
+        background-color: #f7f9fd;
+        border-radius: 0px 0px 0px 150px;
+        background-image: url(../images/banner_sm.svg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 495px;
+        @include sm {
+            // sm 以上隱藏背景
+            background-image: url("");
+            background-color: rgba(247, 249, 253, 0);
+        }
+    }
+
+    .select-list {
+        .select-btn {
+            @include hover-color;
+            @include md {
+                padding: 12px 32px;
+            }
+        }
+        .active {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+
+    .info-list {
+        line-height: 2.5;
+        &::before {
+            content: url(../images/icon_check.svg);
+            margin-right: 12px;
+        }
+        &:nth-child(4) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .question {
+        .question-btn::after {
+            content: url(../images/icon_plus.svg);
+            position: absolute;
+            right: 0;
+        }
+        .question-btn:focus::after {
+            content: url(../images/icon_minus.svg);
+            transform: rotate(720deg);
+        }
+        .question-answer {
+            margin: 1rem 0 0 0;
+            max-height: 0;
+            display: none;
+            line-height: 2;
+        }
+
+        .active {
+            color: $primary;
+            font-weight: bold;
+        }
+        .show {
+            max-height: 200px;
+            display: block;
+        }
+    }
+
+    // ball-3
+    .ball-3 {
+        background-image: url(../images/ball03.svg);
+        background-repeat: no-repeat;
+        background-position: -110px 0;
+        top: 152vh;
+        left: calc(0 - 150px);
+        position: absolute;
+        z-index: -1;
+        width: 200px;
+        height: 360px;
+        @include lg {
+            background-position: -260px 0;
+            background-size: 360px;
+            top: 110vh;
+            width: 360px;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+// RWD - break point
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin hover-light {
+    transition: 0.2s all;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+@mixin hover-color {
+    transition: 0.2s all;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.px-6 {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.py-6 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.mb-6 {
+    margin-bottom: 80px;
+}
+
+.fs-7 {
+    font-size: 14px;
+}
+.fs-8 {
+    font-size: 12px;
+}
+
+.rounded-4 {
+    border-radius: 12px;
+}
+
+.mw136 {
+    max-width: 136px;
+}
+
+
+.logo {
+    overflow: hidden; //將超出範圍的內容隱藏
+    text-indent: 101%; //強迫文字縮排至原本的區域外
+    white-space: nowrap; //讓文字不能換行
+    background-image: url(../images/logo.png);
+    background-size: cover;
+    width: 130px;
+    height: 24px;
+    @include hover-light;
+    @include sm {
+        width: 220px;
+        height: 40px;
+    }
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+    &-img {
+        border-radius: 12px 12px 0 0;
+    }
+    &-mw230 {
+        max-width: 230px;
+    }
+    &-mw260 {
+        max-width: 260px;
+    }
+}
+
+.scrollTop-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    top: 75%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Wendy One", sans-serif;
+    @include md {
+        top: 70%;
+        right: 3%;
+        width: 70px;
+        height: 70px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    transition: 0.2s all;
+}
+body {
+    font-family: var(--bs-font-sans-serif), sans-serif;
+    line-height: 1.5;
+    color: $secondary;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    // 設定 img不超過原寬度並等比例縮放 改為區塊元素
+}
+a {
+    color: $secondary;
+    display: block;
+    text-decoration: none;
+    // a連結 改為區塊元素 取消下底線
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
