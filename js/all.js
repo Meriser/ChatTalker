@@ -2,7 +2,7 @@ $(document).ready(function () {
     /* AOS.js */
     AOS.init({
         once: true,
-        duration: "800",
+        duration: "1000",
     });
 
     // Scroll to top 效果
