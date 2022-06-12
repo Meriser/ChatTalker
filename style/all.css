@@ -12280,7 +12280,6 @@ ul {
 }
 
 .program .question .question-answer {
-  margin: 1rem 0 0 0;
   max-height: 0;
   display: none;
   line-height: 2;
@@ -12289,6 +12288,7 @@ ul {
 .program .question .active {
   color: #56c4c5;
   font-weight: bold;
+  margin-bottom: 1rem !important;
 }
 
 .program .question .show {

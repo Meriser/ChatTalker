@@ -60,7 +60,6 @@
             transform: rotate(720deg);
         }
         .question-answer {
-            margin: 1rem 0 0 0;
             max-height: 0;
             display: none;
             line-height: 2;
@@ -69,6 +68,7 @@
         .active {
             color: $primary;
             font-weight: bold;
+            margin-bottom: 1rem !important;
         }
         .show {
             max-height: 200px;
