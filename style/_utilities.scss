@@ -1,24 +1,25 @@
-// RWD - break point
-@mixin sm {
-    @media (min-width: 576px) {
-        @content;
-    }
-}
-@mixin md {
-    @media (min-width: 768px) {
-        @content;
-    }
-}
-@mixin lg {
-    @media (min-width: 992px) {
-        @content;
-    }
-}
-@mixin xl {
-    @media (min-width: 1200px) {
-        @content;
-    }
-}
+// Bootstrap 5 Mixin 已有寫好的斷點 助教建議改用BS5的 (已修改)
+
+// @mixin sm {
+//     @media (min-width: 576px) {
+//         @content;
+//     }
+// }
+// @mixin md {
+//     @media (min-width: 768px) {
+//         @content;
+//     }
+// }
+// @mixin lg {
+//     @media (min-width: 992px) {
+//         @content;
+//     }
+// }
+// @mixin xl {
+//     @media (min-width: 1200px) {
+//         @content;
+//     }
+// }
 
 @mixin hover-light {
     transition: 0.2s all;
@@ -70,7 +71,7 @@
     width: 130px;
     height: 24px;
     @include hover-light;
-    @include sm {
+    @include media-breakpoint-up(sm) {
         width: 220px;
         height: 40px;
     }
@@ -102,7 +103,7 @@
     font-size: 14px;
     font-weight: bold;
     font-family: "Wendy One", sans-serif;
-    @include md {
+    @include media-breakpoint-up(md) {
         top: 70%;
         right: 3%;
         width: 70px;

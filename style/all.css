@@ -12273,14 +12273,14 @@ ul {
   right: 0;
 }
 
-.program .question .question-btn:focus::after {
+.program .question .question-btn:focus::after,
+.program .question .question-btn:active::after {
   content: url(../images/icon_minus.svg);
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
 }
 
 .program .question .question-answer {
-  max-height: 0;
   display: none;
   line-height: 2;
 }
@@ -12292,7 +12292,6 @@ ul {
 }
 
 .program .question .show {
-  max-height: 200px;
   display: block;
 }
 

@@ -43,7 +43,7 @@ $(document).ready(function () {
             loop: false,
             /* 自動播放 */
             autoplay: {
-                delay: 3500, /* 延遲時間 */
+                delay: 4200, /* 延遲時間 */
             },
             /* 輪播速度 */
             speed: 800,
@@ -106,10 +106,11 @@ $(document).ready(function () {
         $(this).addClass('active');
         $(this).parent().parent().siblings('li').find('div').find('a').removeClass('active');
 
-        $(this).parent().find('p').slideToggle(500);
-        $(this).parent().parent().siblings('li').find('div').find('p').slideUp(500);
+        $(this).parent().find('p').slideToggle(200);
+        $(this).parent().parent().siblings('li').find('div').find('p').slideUp(200);
 
-        $(this).parent().find('p').toggleClass('show');
-        $(this).parent().parent().siblings('li').find('div').find('p').removeClass('show');
+        // 助教建議可不加這段
+        // $(this).parent().find('p').toggleClass('show');
+        // $(this).parent().parent().siblings('li').find('div').find('p').removeClass('show');
     });
 });

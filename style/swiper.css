@@ -353,10 +353,15 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet:only-child {
   display: none !important;
 }
+
+/* 點擊圓點後的樣式 */
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  width: 16px;
+  border-radius: 50px;
 }
+
 .swiper-vertical > .swiper-pagination-bullets,
 .swiper-pagination-vertical.swiper-pagination-bullets {
   right: 10px;

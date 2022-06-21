@@ -1,6 +1,6 @@
 .program {
     .top-bg {
-        @include sm {
+        @include media-breakpoint-up(sm) {
             background-color: #f7f9fd;
             border-radius: 0px 0px 0px 300px;
             background-image: url(../images/banner.svg);
@@ -18,7 +18,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 495px;
-        @include sm {
+        @include media-breakpoint-up(sm) {
             // sm 以上隱藏背景
             background-image: url("");
             background-color: rgba(247, 249, 253, 0);
@@ -28,7 +28,7 @@
     .select-list {
         .select-btn {
             @include hover-color;
-            @include md {
+            @include media-breakpoint-up(md) {
                 padding: 12px 32px;
             }
         }
@@ -55,12 +55,12 @@
             position: absolute;
             right: 0;
         }
-        .question-btn:focus::after {
+        .question-btn:focus::after,
+        .question-btn:active::after {
             content: url(../images/icon_minus.svg);
             transform: rotate(720deg);
         }
         .question-answer {
-            max-height: 0;
             display: none;
             line-height: 2;
         }
@@ -71,7 +71,6 @@
             margin-bottom: 1rem !important;
         }
         .show {
-            max-height: 200px;
             display: block;
         }
     }
@@ -87,7 +86,7 @@
         z-index: -1;
         width: 200px;
         height: 360px;
-        @include lg {
+        @include media-breakpoint-up(lg) {
             background-position: -260px 0;
             background-size: 360px;
             top: 110vh;
